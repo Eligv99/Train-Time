@@ -12,16 +12,6 @@ firebase.initializeApp(config);
 // reference the database
 var database = firebase.database();
 
-// console.log(database);
-
-// database.ref().on('value', function(snapshot){
-//   console.log(snapshot.val());
-// });
-
-// database.ref('/newList').push({
-//   name:'eli Train'
-
-// });
 
 
 // when the submit button is clicked 
@@ -59,25 +49,11 @@ $("#submitTrain").on("click", function(event){
 	$("#startTimeInput").val("");
 	$("#frequencyInput").val("");
   
-
-  // checking for integers
-  if (typeof time === 'number' && typeof frequence === 'number'){
-    alert("Is a number")
-
-    $("#startTimeInput").val("");
-    $("#frequencyInput").val("");
-  }
-  else {
-    alert("Not a number")
-  }
-
   return false;
   
 });
 
 var currentTime = moment();
-
-
 
 database.ref().on("child_added", function (childSnapshot) {
 
@@ -116,6 +92,8 @@ database.ref().on("child_added", function (childSnapshot) {
 
   $("#trainRows").append(row);
 });
+
+// This way was not working for me
 
 // database.ref().on('child_added', function(childSnapshot){
 
