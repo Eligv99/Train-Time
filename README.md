@@ -15,6 +15,6 @@ Try it [here](https://eligv99.github.io/Train-Time/)
 
 # Authors
 
-See contributers [here]()
+See contributers [here](https://github.com/Eligv99/Train-Time/graphs/contributors)
 
 
